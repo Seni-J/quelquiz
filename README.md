@@ -1,5 +1,6 @@
-# YAFF
-Yet Another File Finder
+# QuelQuiz!
+
+
 
 ## Introduction
 
@@ -12,12 +13,10 @@ Yet Another File Finder
 
 ## Projet fait avec
 
-* [LibGDX](https://libgdx.badlogicgames.com) - Framework pour le développement de jeu
-* [Android Studio 3.0](https://developer.android.com/studio/) - Codage et build d'application Android
-* [Inkscape](https://inkscape.org/fr/) - Création des sprites
+* [Vue.js](https://vuejs.org) - Framework javascript pour les interfaces utilisateurs.
 
 
 ## Authors
 
 * **Senistan Jegarajasingam** - *Project Manager / Developer* - [Seni-J](https://github.com/Seni-J)
-* **Jarod Streckeisen** - *Project Manager / Developer* - [JarodStreck](https://github.com/JarodStreck)
+* **Jérémy Gfeller** - *Project Manager / Developer* - [JeremyGfeller](https://github.com/JeremyGfeller)
