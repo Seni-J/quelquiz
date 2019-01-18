@@ -1,0 +1,20 @@
+{
+    "quizzes": [
+        {
+            "title": "Maths Vecteurs",
+            "description": "Questions sur les vecteurs",
+            "imageQuizz": "vecteurs.jpg",
+            "created_by": "Steven Avelino",
+            "number_participants": 28,
+            "id": "5c1a1e0a1b25c0003f2c872a"
+        },
+        {
+            "title": "Maths Dérivées",
+            "description": "Questions sur les dérivées",
+            "imageQuizz": "derivees.jpg",
+            "created_by": "Olivier Pitet",
+            "number_participants": 43,
+            "id": "5c1a1e0a1b25c0003f2c872b"
+        }
+    ]
+}

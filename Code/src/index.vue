@@ -19,13 +19,27 @@
     </div>
     <div id="main">
       <h1>QuelQuiz!</h1>
+      <ul id="example-1">
+        <li v-for="quiz in data" :key="quiz.title">
+          {{ quiz.title }}
+        </li>
+      </ul>
       <b-alert show>Une alerte</b-alert>
     </div>
   </div>
 </template>
+
+
 <script>
+import json from './api/quizlist.json';
+
 export default {
-  name: 'app'
+  name: 'app',
+   data () {
+    return {
+      data: json
+    }
+  }
 }
 </script>
 <style>
@@ -35,16 +49,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: absolute;
 }
 
 #header{
-  display: block;
-  float: inherit;
+  position: relative;
 }
 
 #main{
-  display: block;
-  margin: 0 auto;
-  clear: both;
+  position: relative;
 }
 </style>
