@@ -19,7 +19,7 @@
     </div>
     <div id="main">
       <h1>QuelQuiz!</h1>
-      <ul id="example-1">
+      <ul id="example-2">
         <li v-for="quiz in data" :key="quiz.title">
           {{ quiz.title }}
         </li>
@@ -37,7 +37,10 @@ export default {
   name: 'app',
    data () {
     return {
-      data: json
+      items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
     }
   }
 }

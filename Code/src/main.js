@@ -15,3 +15,16 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(Index),
 }).$mount('#app')
+
+new Vue({
+  el: '#example-1',
+  data: {
+    items: [{
+        message: 'Foo'
+      },
+      {
+        message: 'Bar'
+      }
+    ]
+  }
+})
