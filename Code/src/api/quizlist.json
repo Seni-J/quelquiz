@@ -15,6 +15,14 @@
             "created_by": "Olivier Pitet",
             "number_participants": 43,
             "id": "5c1a1e0a1b25c0003f2c872b"
+        },
+        {
+            "title": "Economie",
+            "description": "Questions sur économie",
+            "imageQuizz": "derivees.jpg",
+            "created_by": "Jérémy Gfeller",
+            "number_participants": 12,
+            "id": "5c1a1e0a1svd0093v0ffb"
         }
     ]
 }

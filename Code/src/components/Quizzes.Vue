@@ -1,33 +1,23 @@
 <template>
-    <router-link :to="'/' + qwizz.id">
-        <div class="card">
-            {{qwizz.name}}
-        </div>
-    </router-link>
+<router-link :to="'/' + quizzes.id">
+    <div class="col-lg-4 col-sm-6 text-center mb-4">
+    <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+    <h3>{{quizzes.title}}
+    <small>{{quizzes.created_by}}</small>
+    </h3>
+    <p>{{quizzes.description}}</p>
+</div>
+</router-link>
 </template>
-<script>
-import json from './api/quizlist.json';
 
+<script>
 export default {
-  name: 'app',
-   data () {
-    return {
-      datas: json
+    props:{
+        quizzes:{
+            type: Object,
+        }
     }
-  }
 }
 </script>
 <style lang="css"scoped>
-
-.card {
-    height:150px;
-    width:150px;
-    background-color:white;
-    filter: drop-shadow(0 0 0.35rem lightgray);
-    margin-left: 20px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-}
 </style>
