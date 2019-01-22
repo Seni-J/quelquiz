@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="quizlist">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!--<nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#"><img style="width: 100px;" src="./assets/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,8 +13,9 @@
           </ul>
         </div>
       </div>
-    </nav>
-
+    </nav>-->
+    
+    
     <!-- Page Content -->
     <div class="container">
 
@@ -32,7 +33,7 @@
         <div v-for="quiz of datas.quizzes" :key="quiz.id">
               <div class="col-lg-4 col-sm-6 text-center mb-4">
               <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
-              <h3>{{quiz.title}}
+              <h3><router-link :to="'/' + quiz.id">{{quiz.title}}</router-link>
               <small>{{quiz.created_by}}</small>
               </h3>
               <p>{{quiz.description}}</p>
@@ -42,6 +43,8 @@
 
     </div>
   </div>
+
+
 </template>
 
 
@@ -49,7 +52,7 @@
 import json from './api/quizlist.json';
 
 export default {
-  name: 'app',
+  name: 'quizlist',
    data () {
     return {
       datas: json

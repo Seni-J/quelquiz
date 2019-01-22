@@ -1,4 +1,4 @@
-# hello-world
+# quelquiz
 
 ## Project setup
 ```
