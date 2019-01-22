@@ -33,7 +33,7 @@
         <div v-for="quiz of datas.quizzes" :key="quiz.id">
               <div class="col-lg-4 col-sm-6 text-center mb-4">
               <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
-              <h3><router-link :to="'/' + quiz.id">{{quiz.title}}</router-link>
+              <h3><router-link :to="'/quiz/' + quiz.id">{{quiz.title}}</router-link>
               <small>{{quiz.created_by}}</small>
               </h3>
               <p>{{quiz.description}}</p>

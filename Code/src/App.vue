@@ -20,7 +20,6 @@ export default {
     position: absolute;
   }
 
-
  .carousel-item {
     height: 65vh;
     min-height: 300px;
@@ -59,5 +58,4 @@ body {
   padding-top: 50px; 
   padding-bottom: 50px;
 }
-
 </style>
