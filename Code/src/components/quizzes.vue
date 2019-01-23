@@ -1,20 +1,19 @@
 /*eslint-disable */
 <template>
-  <div class="hello">
-    <h1>QuelQuiz!</h1>
-    <div  v-for="(quiz, index) of data.quizzes"  style="display:flex" :key="quiz.id">
-      <div v-if="quiz.id == $route.params.id">
-        {{quiz.title}}
-        {{setQuizIndex(index)}}
-      </div>   
-    </div>
-    
-
-    <header>
-      <div class="col-lg-12 center" id="header">
-        {{this.data.quizzes[this.quizindex].questions[0].question}}
+  <div class="container-fluid">
+    <div class="row">
+      <h1>QuelQuiz!</h1>
+      <div v-for="(quiz, index) of data.quizzes"  style="display:flex" :key="quiz.id">
+        <div v-if="quiz.id == $route.params.id">
+          {{quiz.title}}
+          {{setQuizIndex(index)}}
+        </div>   
       </div>
-    </header>
+    </div>
+
+    <div class="row col-lg-12 center" id="header">
+      {{this.data.quizzes[this.quizindex].questions[0].question}}
+    </div>
 
     <!-- Page Content -->
     <section class="py-5">
@@ -92,3 +91,33 @@ export default {
   }
 }
 </script>
+<style>
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+#header{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  background-color: darkgrey;
+  width: 57.7%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.reponse {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 50px; 
+  padding-bottom: 50px;
+}
+</style>
