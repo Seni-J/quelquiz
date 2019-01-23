@@ -1,3 +1,4 @@
+/*eslint-disable */
 <template>
   <form class="form-signin">
       <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -15,13 +16,9 @@
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
     </form>
 </template>
-
-
 <script>
 export default {
-  
 }
 </script>
 <style>
-
 </style>

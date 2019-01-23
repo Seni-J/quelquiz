@@ -1,9 +1,9 @@
+/*eslint-disable */
 <template>
   <div class="hello">
     <h1>QuelQuiz!</h1>
-    <div style="display:flex">    
+    <div style="display:flex">
         {{this.$route.params.id }}
-        {{}}
     </div>
 
     <header>
@@ -27,7 +27,7 @@
           </div>
           <div class="col-lg-6">
             <div class="card">
-              <a href="#"> 
+              <a href="#">
                 <div class="reponse">
                   reponse 2
                 </div>
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import json from '../api/questions.json';
+import json from '../api/questions.json'
 
 export default {
   name: 'quiz',
@@ -70,7 +70,7 @@ export default {
     return {
       data: json,
       question: null,
-      index:0
+      index: 0
     }
   }
 }

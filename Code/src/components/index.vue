@@ -1,3 +1,4 @@
+/*eslint-disable */
 <template>
   <div id="quizlist">
     <!-- Navigation -->
@@ -14,17 +15,13 @@
         </div>
       </div>
     </nav>
-    
-    
     <!-- Page Content -->
     <div class="container">
-
       <!-- Introduction Row -->
       <h1 class="my-4" style="padding-top: 20px;">
-        Bienvenue sur QuelQuiz ! 
+        Bienvenue sur QuelQuiz !
       </h1>
       <p>Ce site a été créé en Vue.js !</p>
-
       <!-- Team Members Row -->
       <div class="row">
         <div class="col-lg-12">
@@ -40,20 +37,16 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
-
 </template>
-
-
 <script>
-import json from '../api/quizlist.json';
+
+import json from '../api/quizlist.json'
 
 export default {
   name: 'quizlist',
-   data () {
+  data () {
     return {
       datas: json
     }
@@ -61,5 +54,4 @@ export default {
 }
 </script>
 <style>
-
 </style>

@@ -1,3 +1,4 @@
+/*eslint-disable */
 <template>
   <div id="app">
     <router-view/>
@@ -41,7 +42,7 @@ body {
 }
 
 #header{
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 100px;
@@ -52,10 +53,10 @@ body {
 }
 
 .reponse {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding-top: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 </style>
