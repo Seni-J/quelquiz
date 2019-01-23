@@ -35,6 +35,43 @@
             }
         ]
     },
-    "created_by": "Steven Avelino",
-    "number_participants": 28
+    "id": "2",
+    "title": "Maths Dérivées",
+    "description": "Questions sur les dérivées",
+    "questions": [
+        {
+            "question": " Qu’estce qu’un vecteur ?",
+            "image": "vecteur2D.png",
+            "answers": [
+                {
+                    "value": "Un chiffre",
+                    "correct": "false"
+                },
+                {
+                    "value": "Un segment de droite orientée",
+                    "correct": "true"
+                },
+                {
+                    "value": "Une surface",
+                    "correct": "false"
+                }
+            ]
+        },
+        {
+            "question": "Qu’est-ce qu’une fonction?",
+            "image": "",
+            "answers": [
+                {
+                    "value": "Un nombre",
+                    "correct": "false"
+                },
+                {
+                    "value": "Une opération",
+                    "correct": "true"
+                }
+            ]
+        }
+    ]
 }
+
+
