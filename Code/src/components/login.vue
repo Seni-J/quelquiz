@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Header/>
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
@@ -35,7 +36,11 @@
   </div>
 </template>
 <script>
+import Header from './header.vue'
 export default {
+  components: {
+        Header
+    }
 }
 </script>
 <style>
