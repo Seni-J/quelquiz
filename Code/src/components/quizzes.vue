@@ -66,9 +66,13 @@
 
 <script>
 import json from '../api/quizlist.json'
+import Header from './header.vue'
 
 export default {
   name: 'quiz',
+  components: {
+    Header
+  },
   data () {
     return {
       data: json,
