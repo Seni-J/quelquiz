@@ -1,6 +1,6 @@
 <template>
 <div>
-
+  <Header/>
     <!-- Page Content -->
     <div class="container">
         <div class="row" style="margin-top:40px">
