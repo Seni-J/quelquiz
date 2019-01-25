@@ -1,4 +1,5 @@
-- Zooning et Wireframe -> mobile 
-- Documentation -> synthèse, 
+- Zooning et Wireframe -> mobile
+- Documentation -> synthï¿½se,
 - Vue -> login et inscription
-- Vue -> Jouer Quiz, résultats
+- Vue -> Jouer Quiz, rï¿½sultats
+JOURNAL DE TRAVAIL
