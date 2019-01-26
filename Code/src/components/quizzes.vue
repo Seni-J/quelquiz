@@ -1,65 +1,34 @@
 /*eslint-disable */
 <template>
   <div class="container-fluid">
+    <Header/>
     <div class="row">
-      <h1>QuelQuiz!</h1>
       <div v-for="(quiz, index) of data.quizzes"  style="display:flex" :key="quiz.id">
-        <div v-if="quiz.id == $route.params.id">
+        <div v-if="quiz.id == $route.params.id" style="text-align:center">
           {{quiz.title}}
           {{setQuizIndex(index)}}
         </div>   
       </div>
     </div>
 
+    <div class="result" v-show="end">
+      Bonjour
+      </div>
+      <div class="questions" v-show="!end">
     <div class="row col-lg-12 center" id="header">
-      {{this.data.quizzes[this.quizindex].questions[0].question}}
+      {{this.data.quizzes[this.quizindex].questions[this.questionindex].question}}
     </div>
-
     <!-- Page Content -->
     <section class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <a href="#">
-                <div class="reponse">
-                  {{this.data.quizzes[this.quizindex].questions[0].answers[0].name}}
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card">
-              <a href="#">
-                <div class="reponse">
-                  {{this.data.quizzes[this.quizindex].questions[0].answers[1].name}}
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row" style="padding-top: 50px;">
-          <div class="col-lg-6">
-            <div class="card">
-              <a href="#">
-                <div class="reponse">
-                  reponse 3
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card">
-              <a href="#">
-                <div class="reponse">
-                  reponse 4
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <b-list-group>
+        <b-list-group-item button v-for="(item, index) in this.data.quizzes[this.quizindex].questions[this.questionindex].answers" :key="item.id" @click="nextquestion(index)">
+            {{item.name}}
+      </b-list-group-item>
+      </b-list-group>
+       </div>
     </section>
+    </div>
   </div>
 
 </template>
@@ -79,32 +48,32 @@ export default {
       question: null,
       quizindex: 0,
       questionindex: 0,
-      points: 0
+      points: 0,
+      end: false
     }
   },
   methods:{
     setQuizIndex: function(index){
-    this.quizindex = index
+    this.quizindex = index;
     },
-    nextquestion: function(){
-      this.questionindex = this.json.quizzes[quizindex].questions[questionindex]
+    nextquestion: function(index){
+      if(this.data.quizzes[this.quizindex].questions[this.questionindex].answers[index].value == 'true'){
+        this.points++
+        alert(this.points)
+      }
+
+      if(this.index == this.data.quizzes[this.quizindex].questions - 1) {
+        this.end = true;
+      } else {
+        this.questionindex++
+      }
+      
     }
-  },
-  mounted(){
-    this.question = "Slt"
   }
 }
 </script>
 <style>
-body {
-  padding-top: 54px;
-}
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
 
 #header{
   display: flex; 
@@ -117,11 +86,4 @@ body {
   margin-top: 100px;
 }
 
-.reponse {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding-top: 50px; 
-  padding-bottom: 50px;
-}
 </style>

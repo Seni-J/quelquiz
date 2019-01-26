@@ -6,8 +6,13 @@ import index from './components/index'
 import quiz from './components/quizzes'
 import login from './components/login'
 import register from './components/register'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(VueRouter);
+Vue.use(BootstrapVue);
+
 
 Vue.config.productionTip = false
 

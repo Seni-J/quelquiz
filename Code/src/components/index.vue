@@ -22,8 +22,8 @@
                                 <h4 class="card-title">
                                     <router-link :to="'/quiz/' + quiz.id">{{quiz.title}}</router-link>
                                 </h4>
-                                <small>{{quiz.created_by}}</small>
-                                <p>{{quiz.description}}</p>
+                                <small>Crée par: {{quiz.created_by}}</small>
+                                <p><br/>{{quiz.description}}</p>
                             </div>
                         </div>
                     </div>
