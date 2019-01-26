@@ -12,8 +12,10 @@
     </div>
 
     <div class="result" v-show="end">
-      Bonjour
-      </div>
+      Voici votre Résulat:
+      {{this.points}} Questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
+      <br><router-link :to="'/'"><b-button>Retour à l'accueil</b-button></router-link>
+    </div>
       <div class="questions" v-show="!end">
     <div class="row col-lg-12 center" id="header">
       {{this.data.quizzes[this.quizindex].questions[this.questionindex].question}}
@@ -59,10 +61,9 @@ export default {
     nextquestion: function(index){
       if(this.data.quizzes[this.quizindex].questions[this.questionindex].answers[index].value == 'true'){
         this.points++
-        alert(this.points)
       }
 
-      if(this.index == this.data.quizzes[this.quizindex].questions - 1) {
+      if(this.questionindex == this.data.quizzes[this.quizindex].questions.length - 1) {
         this.end = true;
       } else {
         this.questionindex++
