@@ -39,29 +39,35 @@
       <!-- Answers -->
       <section class="py-5">
         <div class="flex-container">
-        <div class="col-lg-4" button v-for="(item, index) in this.data.quizzes[this.quizindex].questions[this.questionindex].answers" :key="item.id" @click="nextquestion(index)">
-            <div v-if="index == 0">
-              <div class="card">
-                  <div class="reponse">
-                    {{item.name}}
-                  </div>
+          <div class="col-lg-4" button v-for="(item, index) in this.data.quizzes[this.quizindex].questions[this.questionindex].answers" :key="item.id" @click="nextquestion(index)">
+              <div v-if="index == 0">
+                <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
+                <div class="card" :key="item.name">
+                    <div class="reponse">
+                      {{item.name}}
+                    </div>
+                </div>
+                </transition>
               </div>
-            </div>
-            <div v-else-if="index == 1 || index == 3">
-              <div class="card">
-                  <div class="reponse">
-                    {{item.name}}
-                  </div>
+              <div v-else-if="index == 1 || index == 3">
+                <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
+                <div class="card" :key="item.name">
+                    <div class="reponse">
+                      {{item.name}}
+                    </div>
+                </div>
+                </transition>
               </div>
-            </div>
-            <div  v-if="index == 2">
-              <div class="card">
-                  <div class="reponse">
-                    {{item.name}}
-                  </div>
+              <div  v-if="index == 2">
+                <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
+                <div class="card" :key="item.name">
+                    <div class="reponse">
+                      {{item.name}}
+                    </div>
+                </div>
+                </transition>
               </div>
-            </div>
-        </div>
+          </div>
         </div>
       </section>
 
@@ -160,5 +166,19 @@ export default {
 .fade-enter, .fade-leave-to  {
   opacity: 0
 }
+
+
+.slider-enter-active, .slider-leave-active {
+  transition: opacity .3s;
+}
+
+.slider-enter-active {
+  transition-delay: .5s;
+}
+
+.slider-enter, .slider-leave-to {
+  opacity: 0;
+}
+
 
 </style>
