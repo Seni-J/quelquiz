@@ -2,14 +2,14 @@
     <div>
         <div class="container">
             <Header/>
-            <!-- Page Content -->
+            <!-- Welcome header -->
             <div class="row" style="margin-top:40px">
                 <div class="col text-center">
                     <h1 style="fontSize:70px">Bienvenue sur QuelQuiz!</h1>
                 </div>
             </div>
 
-            <!-- Team Members Row -->
+            <!-- List of quizzes -->
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="my-4">Tous les quizz</h2>
