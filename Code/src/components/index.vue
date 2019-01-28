@@ -20,10 +20,11 @@
                             <img class="card-img-top" src="http://placehold.it/700x400" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <router-link :to="'/quiz/' + quiz.id">{{quiz.title}}</router-link>
+                                    {{quiz.title}}
                                 </h4>
                                 <small>Crée par: {{quiz.created_by}}</small>
                                 <p><br/>{{quiz.description}}</p>
+                                <router-link :to="'/quiz/' + quiz.id"><button type="button" class="btn btn-primary">Aller au quiz</button></router-link>
                             </div>
                         </div>
                     </div>
@@ -51,6 +52,9 @@ export default {
 </script>
 
 <style>
+.card {
+  background-color: #ffba42;
+}
 .portfolio-item {
     margin-bottom: 30px;
 }
