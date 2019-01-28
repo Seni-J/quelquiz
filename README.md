@@ -17,7 +17,7 @@ Ce projet a été réalisé dans le cadre du module GUI2.
 1. Cloner le repo
 
 ```console
-git clone https://github.com/Seni-J/quelquiz.git C:/
+git clone https://github.com/Seni-J/quelquiz.git
 ```
 
 2. Se rendre dans le repo fraîchement cloné avec un terminal ou cmder et lancer la commande suivante
