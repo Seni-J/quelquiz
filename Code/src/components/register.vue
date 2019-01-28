@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-label-group">
-                    <input type="password" id="confirmPassword" class="form-control" placeholder="Mot de passe" required="required">
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Répeter le mot de passe" required="required">
                   </div>
                 </div>
               </div>
@@ -58,4 +58,24 @@ export default {
 }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Dosis:600');
+
+.card{
+    font-family: 'Dosis', sans-serif;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #382c7e;
+    border-color: #382c7e; 
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #4431b3;
+    border-color: #382c7e; 
+}
+@media screen and (max-width: 768px){
+  .form-label-group{
+    margin-top: 10px;
+  }
+}
 </style>

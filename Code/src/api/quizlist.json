@@ -4,6 +4,7 @@
       "title": "Quizz Géométrie",
       "description": "Questions sur les formes et volumes",
       "created_by": "amr",
+      "image": "static/geometry.jpg",
       "questions": [{
           "id": "5c3f0c696f912a0004c01251",
           "question": "Combien de côtés possède un cube",
@@ -92,6 +93,7 @@
       "title": "Quizz Web Bases",
       "description": "Questions de base sur le développement web",
       "created_by": "amr",
+      "image": "static/css.png",
       "questions": [{
           "id": "5c45922628a39b00045f1944",
           "question": "CSS est l'abréviation de Computed Style Sheets",

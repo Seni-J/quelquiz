@@ -14,14 +14,19 @@
     <!-- Result -->
     <transition name="fade">
     <div class="result" v-show="end">
-      Voici votre Résulat:
-      <div v-if="this.points > 1">
-      {{this.points}} Questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
+      <div class="stats">
+        <div class="resulttext">
+          RÉSULTAT
+        </div><br/>
+        <div class="resultscore" v-if="this.points > 1">
+        {{this.points}} questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
+        </div>
+        <div class="resultscore" v-else>
+          {{this.points}} question correcte sur {{this.data.quizzes[this.quizindex].questions.length}}
+          <br/><br/>N'hésitez pas à recommencer pour améliorer votre score!
+        </div>
+        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg">Retour à l'accueil</button></router-link>
       </div>
-      <div v-else>
-        {{this.points}} Question correcte sur {{this.data.quizzes[this.quizindex].questions.length}}
-      </div>
-      <br><router-link :to="'/'"><b-button>Retour à l'accueil</b-button></router-link>
     </div>
     </transition>
 
@@ -29,7 +34,7 @@
     <div class="questions" v-show="!end">
       
       <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
-        <div class="row col-lg-12 center" id="header" :key="this.data.quizzes[this.quizindex].questions[this.questionindex].question">
+        <div class="row col-lg-12 center question" id="header" :key="this.data.quizzes[this.quizindex].questions[this.questionindex].question">
           {{this.data.quizzes[this.quizindex].questions[this.questionindex].question}}
         </div>
       </transition>
@@ -115,6 +120,8 @@ export default {
 </script>
 <style>
 @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.2";
+@import url('https://fonts.googleapis.com/css?family=Dosis:600');
+
 
 #header{
   display: flex; 
@@ -126,7 +133,32 @@ export default {
   margin: auto;
   margin-top: 100px;
 }
+
+.stats{
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  color: #ffba42;
+}
+
+.resulttext{
+  font-size: 70px;
+  text-decoration: underline;
+}
+
+.resultscore{
+  font-size: 64px;
+}
+
+.question{
+    font-family: 'Dosis', sans-serif;
+    font-size: 28px;
+    color: #382c7e;
+}
+
 .reponse {
+  font-family: 'Dosis', sans-serif;
+  color: #382c7e;
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -148,7 +180,7 @@ export default {
   font-size: 30px;
 }
 .fade-enter-active, .fade-leave-active {
-        transition: opacity 1s
+   transition: opacity 1s
 }
 .fade-enter, .fade-leave-to  {
   opacity: 0
@@ -157,9 +189,20 @@ export default {
   transition: opacity .3s;
 }
 .slider-enter-active {
-  transition-delay: .5s;
+  transition-delay: .3s;
 }
 .slider-enter, .slider-leave-to {
   opacity: 0;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #ffba42;
+    border-color: #ffba42; 
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
+    color: #fff;
+    background-color: #fdce7d;
+    border-color: #fdce7d; 
 }
 </style>

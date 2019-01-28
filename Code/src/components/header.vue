@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Accueil<span class="sr-only">(current)</span></a>
+                        <a class="nav-link " href="/">Accueil<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -40,5 +40,14 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Dosis:800');
+
+.navbar{
+    font-family: 'Dosis', sans-serif;
+}
+
+.nav-link{
+    font-size: 28px;
+}
 
 </style>

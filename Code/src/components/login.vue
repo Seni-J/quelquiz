@@ -35,4 +35,20 @@ export default {
 }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Dosis:600');
+
+.card{
+    font-family: 'Dosis', sans-serif;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #382c7e;
+    border-color: #382c7e; 
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #4431b3;
+    border-color: #382c7e; 
+}
 </style>
