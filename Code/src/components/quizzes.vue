@@ -1,6 +1,6 @@
 /*eslint-disable */
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <Header/>
     <div class="row">
       <div v-for="(quiz, index) of data.quizzes"  style="display:flex" :key="quiz.id">
@@ -28,13 +28,11 @@
     <!-- Question -->
     <div class="questions" v-show="!end">
       
-      <div class="row col-lg-12 center" id="header">
-        <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
-        <div :key="this.data.quizzes[this.quizindex].questions[this.questionindex].question">
-        {{this.data.quizzes[this.quizindex].questions[this.questionindex].question}}
+      <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
+        <div class="row col-lg-12 center" id="header" :key="this.data.quizzes[this.quizindex].questions[this.questionindex].question">
+          {{this.data.quizzes[this.quizindex].questions[this.questionindex].question}}
         </div>
-        </transition>
-      </div>
+      </transition>
 
       <!-- Answers -->
       <section class="py-5">
@@ -70,18 +68,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Answers v2 (list)
-      <section class="py-5">
-        <div class="container">
-        <b-list-group>
-          <b-list-group-item button v-for="(item, index) in this.data.quizzes[this.quizindex].questions[this.questionindex].answers" :key="item.id" @click="nextquestion(index)">
-            {{item.name}}
-          </b-list-group-item> 
-        </b-list-group>
-        </div>
-      </section>
-      -->
     </div>
   </div>
 
@@ -135,8 +121,8 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 100px;
-  background-color: darkgrey;
-  width: 57.7%;
+  background-color: #ffba42;
+  width: 80%;
   margin: auto;
   margin-top: 100px;
 }
@@ -146,6 +132,7 @@ export default {
   justify-content: center; 
   padding-top: 50px; 
   padding-bottom: 50px;
+  background-color: #ffba42;
 }
 .flex-container {
   display: flex;
@@ -166,19 +153,13 @@ export default {
 .fade-enter, .fade-leave-to  {
   opacity: 0
 }
-
-
 .slider-enter-active, .slider-leave-active {
   transition: opacity .3s;
 }
-
 .slider-enter-active {
   transition-delay: .5s;
 }
-
 .slider-enter, .slider-leave-to {
   opacity: 0;
 }
-
-
 </style>

@@ -1,7 +1,7 @@
 /*eslint-disable */
 <template>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e64b77;">
         <div class="container">
             <a class="navbar-brand" href="/"><img style="width: 100px;" :src="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
