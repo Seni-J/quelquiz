@@ -62,10 +62,11 @@ export default {
     margin-bottom: 30px;
 }
 .card-img-top{
-    width: 250px;
-    height: 150px; 
-    margin-left: 1px;
-    margin-top: 1px; 
+    width: 100%;
+    height: auto; 
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px; 
 }
 
 .pagination {
@@ -88,31 +89,5 @@ export default {
     color: #fff;
     background-color: #4431b3;
     border-color: #382c7e; 
-}
-
-@media screen and (min-width: 566px){
-  .card-img-top{
-    width: 235px;
-    height: 150px; 
-    margin-left: 2px;
-    margin-top: 1px; 
-    }
-}
-@media screen and (min-width: 767px){
-    .card-img-top{
-        width: 206px;
-        height: 120px; 
-        margin-left: 1px;
-        margin-top: 1px; 
-    }
-}
-
-@media screen and (min-width: 1203px){
-    .card-img-top{
-        width: 250px;
-        height: 150px; 
-        margin-left: 1px;
-        margin-top: 1px; 
-    }
 }
 </style>
