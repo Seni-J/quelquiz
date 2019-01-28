@@ -1,5 +1,7 @@
 # QuelQuiz!
 
+![QuelQuiz!](/Code/src/assets/logo.png)
+
 
 ## Introduction
 
