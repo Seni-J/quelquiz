@@ -2,7 +2,7 @@
   <div class="container">
     <Header/>
     
-      <div class="card card-register mx-auto mt-5">
+      <div class="card card-register mx-auto mt-5" style="background-color: #ffba42;">
         <div class="card-header">Créer un compte</div>
         <div class="card-body">
           <form action="/">
@@ -60,7 +60,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Dosis:600');
 
-.card{
+.card {
     font-family: 'Dosis', sans-serif;
 }
 .btn-primary {

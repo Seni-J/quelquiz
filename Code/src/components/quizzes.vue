@@ -122,7 +122,6 @@ export default {
 @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.2";
 @import url('https://fonts.googleapis.com/css?family=Dosis:600');
 
-
 #header{
   display: flex; 
   align-items: center;
@@ -166,6 +165,12 @@ export default {
   padding-bottom: 50px;
   background-color: #ffba42;
 }
+
+.reponse:hover{
+  background-color: #e64b77;
+  cursor: pointer;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -173,24 +178,30 @@ export default {
   justify-content: center; /* center items horizontally, in this case */
   align-items: center; 
 }
+
 .flex-container > div {
   flex: 0 50%;
   margin: 10px;
   padding: 20px;
   font-size: 30px;
 }
+
 .fade-enter-active, .fade-leave-active {
    transition: opacity 1s
 }
+
 .fade-enter, .fade-leave-to  {
   opacity: 0
 }
+
 .slider-enter-active, .slider-leave-active {
   transition: opacity .3s;
 }
+
 .slider-enter-active {
   transition-delay: .3s;
 }
+
 .slider-enter, .slider-leave-to {
   opacity: 0;
 }
@@ -200,9 +211,28 @@ export default {
     background-color: #ffba42;
     border-color: #ffba42; 
 }
+
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
     color: #fff;
     background-color: #fdce7d;
     border-color: #fdce7d; 
 }
+
+@media (max-width: 990px) {
+  #header{
+    padding: 50px;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .reponse {
+    padding: 20px;
+  }
+
+  .flex-container > div {
+    padding: 0px;
+    flex: 0 100%;
+  }
+}
+
 </style>
