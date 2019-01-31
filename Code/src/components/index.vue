@@ -23,7 +23,7 @@
                                     {{quiz.title}}
                                 </h4>
                                 <small>Crée par: {{quiz.created_by}}</small>
-                                <p><br/>{{quiz.description}}</p>
+                                <p style="padding-top: 20px;">{{quiz.description}}</p>
                                 <router-link :to="'/quiz/' + quiz.id"><button type="button" class="btn btn-primary">Aller au quiz</button></router-link>
                             </div>
                         </div>
