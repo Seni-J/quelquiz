@@ -43,33 +43,13 @@
       <section class="py-5">
         <div class="flex-container">
           <div class="col-lg-4" button v-for="(item, index) in this.data.quizzes[this.quizindex].questions[this.questionindex].answers" :key="item.id" @click="nextquestion(index)">
-              <div v-if="index == 0">
-                <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
-                <div class="card" :key="item.name">
-                    <div class="reponse">
-                      {{item.name}}
-                    </div>
-                </div>
-                </transition>
+            <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
+              <div class="card" :key="item.name">
+                  <div class="reponse">
+                    {{item.name}}
+                  </div>
               </div>
-              <div v-else-if="index == 1 || index == 3">
-                <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
-                <div class="card" :key="item.name">
-                    <div class="reponse">
-                      {{item.name}}
-                    </div>
-                </div>
-                </transition>
-              </div>
-              <div  v-if="index == 2">
-                <transition mode="out-in" appear enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRight">
-                <div class="card" :key="item.name">
-                    <div class="reponse">
-                      {{item.name}}
-                    </div>
-                </div>
-                </transition>
-              </div>
+            </transition>
           </div>
         </div>
       </section>
