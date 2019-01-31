@@ -16,16 +16,16 @@
       <div class="stats">
         <div class="resulttext">
           RÉSULTAT
-        </div><br/>
+        </div>
         <div class="resultscore" v-if="this.points > 1">
-        {{this.points}} questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
+          {{this.points}} questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
         </div>
-        <div class="resultscore" v-else>
+        <div class="resultscore" v-else style="padding-bottom: 20px; padding-top: 30px;">
           {{this.points}} question correcte sur {{this.data.quizzes[this.quizindex].questions.length}}
-          <br/><br/>N'hésitez pas à recommencer pour améliorer votre score!
+          <br/>N'hésitez pas à recommencer pour améliorer votre score!
         </div>
-        <br><button type="button" class="btn btn-secondary btn-lg" v-on:click=reloadPage>Rejouer le quiz</button><br>
-        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg">Retour à l'accueil</button></router-link>
+        <button type="button" class="btn btn-secondary btn-lg" v-on:click=reloadPage style="margin-bottom: 30px;">Rejouer le quiz</button>
+        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg" style="margin-bottom: 30px;">Retour à l'accueil</button></router-link>
       </div>
     </div>
     </transition>
