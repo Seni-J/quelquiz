@@ -18,14 +18,14 @@
           RÉSULTAT
         </div>
         <div class="resultscore" v-if="this.points > 1">
-        {{this.points}} questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
+          {{this.points}} questions correctes sur {{this.data.quizzes[this.quizindex].questions.length}}
         </div>
-        <div class="resultscore" v-else style="padding-bottom: 20px; padding-top: 20px;">
+        <div class="resultscore" v-else style="padding-bottom: 20px; padding-top: 30px;">
           {{this.points}} question correcte sur {{this.data.quizzes[this.quizindex].questions.length}}
           <br/>N'hésitez pas à recommencer pour améliorer votre score!
         </div>
         <button type="button" class="btn btn-secondary btn-lg" v-on:click=reloadPage style="margin-bottom: 30px;">Rejouer le quiz</button>
-        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg">Retour à l'accueil</button></router-link>
+        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg" style="margin-bottom: 30px;">Retour à l'accueil</button></router-link>
       </div>
     </div>
     </transition>
