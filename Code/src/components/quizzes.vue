@@ -1,4 +1,3 @@
-/*eslint-disable */
 <template>
   <div class="container">
     <Header/>
@@ -25,6 +24,7 @@
           {{this.points}} question correcte sur {{this.data.quizzes[this.quizindex].questions.length}}
           <br/><br/>N'hésitez pas à recommencer pour améliorer votre score!
         </div>
+        <br><button type="button" class="btn btn-secondary btn-lg" v-on:click=reloadPage>Rejouer le quiz</button><br>
         <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg">Retour à l'accueil</button></router-link>
       </div>
     </div>
@@ -114,6 +114,10 @@ export default {
       } else {
         this.questionindex++
       }
+    },
+    //Reload the same page
+    reloadPage(){
+      window.location.reload()
     }
   }
 }
