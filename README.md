@@ -20,19 +20,25 @@ Ce projet a été réalisé dans le cadre du module GUI2.
 git clone https://github.com/Seni-J/quelquiz.git
 ```
 
-2. Se rendre dans le repo fraîchement cloné avec un terminal ou cmder et lancer la commande suivante
+2. Se rendre ensuite dans le dossier code dans le repo que vous venez de cloner. Respectez les majuscules.
+
+``` console
+cd quelquiz/Code
+```
+
+3. Puis lancer la commande suivante pour installer les dépendances 
 
 ```console
 npm install
 ```
 
-3. Une fois le processus terminé, lancez un serveur virtuel avec la commande suivante
+4. Une fois le processus terminé, lancez un serveur virtuel avec la commande suivante
 
 ```console
 npm run dev
 ```
 
-4. Se rendre sur votre navigateur et tapez l'adresse suivante
+5. Se rendre sur votre navigateur et tapez l'adresse suivante
 
 ```
 http://localhost:8080
@@ -51,3 +57,4 @@ http://localhost:8080
 ## Liens
 
 - MoodBoard - http://www.gomoodboard.com/boards/1alDTGdz/share
+- Dossier qui contient le [moodboard](https://github.com/Seni-J/quelquiz/tree/master/Documentation/moodboard)
