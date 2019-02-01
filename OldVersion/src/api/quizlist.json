@@ -1,0 +1,28 @@
+{
+    "quizzes": [
+        {
+            "title": "Maths Vecteurs",
+            "description": "Questions sur les vecteurs",
+            "imageQuizz": "vecteurs.jpg",
+            "created_by": "Steven Avelino",
+            "number_participants": 28,
+            "id": "1"
+        },
+        {
+            "title": "Maths Dérivées",
+            "description": "Questions sur les dérivées",
+            "imageQuizz": "derivees.jpg",
+            "created_by": "Olivier Pitet",
+            "number_participants": 43,
+            "id": "2"
+        },
+        {
+            "title": "Economie",
+            "description": "Questions sur économie",
+            "imageQuizz": "derivees.jpg",
+            "created_by": "Jérémy Gfeller",
+            "number_participants": 12,
+            "id": "3"
+        }
+    ]
+}
