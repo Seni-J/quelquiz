@@ -24,8 +24,8 @@
           {{this.points}} question correcte sur {{this.data.quizzes[this.quizindex].questions.length}}
           <br/>N'hésitez pas à recommencer pour améliorer votre score!
         </div>
-        <button type="button" class="btn btn-secondary btn-lg" v-on:click=reloadPage style="margin-bottom: 30px;">Rejouer le quiz</button>
-        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg" style="margin-bottom: 30px;">Retour à l'accueil</button></router-link>
+        <button type="button" class="btn btn-secondary btn-lg" v-on:click=reloadPage style="margin-bottom: 30px; color: #382c7e;">Rejouer le quiz</button>
+        <br><router-link :to="'/'"><button type="button" class="btn btn-secondary btn-lg" style="margin-bottom: 30px; color: #382c7e;">Retour à l'accueil</button></router-link>
       </div>
     </div>
     </transition>
