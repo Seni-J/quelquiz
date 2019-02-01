@@ -1,0 +1,3 @@
+orange: #ffba42
+bleu: #382c7e
+rose: #e64b77
